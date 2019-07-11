@@ -5,7 +5,7 @@
     "shortDescription":"JDBC driver for MS Access",
     "slug":"ucanaccess",
     "type":"lucee-extensions",
-    "version":"0.1.0",
+    "version":"0.2.0",
     "description":"Connect to MS Access database file via uCanAccess JDBC driver",
     "devDependencies":{},
     "documentation":"http://ucanaccess.sourceforge.net/site.html#examples",
@@ -22,7 +22,7 @@
             "URL":"http://www.apache.org/licenses/LICENSE-2.0.txt"
         }
     ],
-    "location":"https://bitbucket.org/michaelborn_me/ucanaccess/get/v0.1.0.zip",
+    "location":"https://bitbucket.org/michaelborn_me/ucanaccess/get/v0.2.0.zip",
     "private":false,
     "projectURL":"https://bitbucket.org/michaelborn_me/ucanaccess",
     "repository":{
@@ -31,7 +31,7 @@
     },
     "scripts":{
         "postVersion":"package set location='https://bitbucket.org/michaelborn_me/ucanaccess/get/v`package version`.zip'",
-        "preRelease": "repl input='cfzip(action=\"zip\",source=\"extension\",file=\"lucee-extension.zip\"){}' && repl input='cfzip(action=\"zip\",source=\"extension\",file=\"lucee-extension.lex\"){}' && git add lucee-extension.lex lucee-extension.zip && !git commit -m 'Add new release .lex and .zip'",
+        "preRelease":"repl input='cfzip(action=\"zip\",source=\"extension\",file=\"lucee-extension.zip\"){}' && repl input='cfzip(action=\"zip\",source=\"extension\",file=\"lucee-extension.lex\"){}' && git add lucee-extension.lex lucee-extension.zip && !git commit -m 'Add new release .lex and .zip'",
         "onRelease":"publish",
         "postPublish":"!git push --follow-tags"
     }
