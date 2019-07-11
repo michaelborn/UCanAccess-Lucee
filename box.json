@@ -1,0 +1,38 @@
+{
+    "name":"UCanAccess",
+    "author":"Michael Born <mike@learncf.dev>",
+    "bugs":"",
+    "shortDescription":"JDBC driver for MS Access",
+    "slug":"ucanaccess",
+    "type":"lucee-extensions",
+    "version":"0.0.1",
+    "description":"Connect to MS Access database file via uCanAccess JDBC driver",
+    "devDependencies":{},
+    "documentation":"http://ucanaccess.sourceforge.net/site.html#examples",
+    "homepage":"http://ucanaccess.sourceforge.net/site.html#home",
+    "ignore":[
+        "**/.*",
+        "/test/",
+        "/tests/"
+    ],
+    "keywords":[],
+    "license":[
+        {
+            "type":"Apache-2.0",
+            "URL":"http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+    ],
+    "location":"",
+    "private":false,
+    "projectURL":"https://bitbucket.org/michaelborn_me/ucanaccess",
+    "repository":{
+        "type":"git",
+        "URL":"https://bitbucket.org/michaelborn_me/ucanaccess"
+    },
+    "scripts": {
+        "preVersion":"repl input=cfzip(action=\"zip\",source=\"extension\",file=\"lucee-extension.zip\"){} && repl input=cfzip(action=\"zip\",source=\"extension\",file=\"lucee-extension.lex\"){}",
+        "postVersion":"package set location='https://bitbucket.org/michaelborn_me/ucanaccess/get/v`package version`.zip'",
+        "onRelease":"publish",
+        "postPublish":"!git push --follow-tags"
+    }
+}
