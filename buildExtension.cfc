@@ -23,23 +23,32 @@ component {
     // }
 
     function generateZips() {
-        cfzip(action="zip", source="extension", file="lucee-extension.zip") {}
-        cfzip(action="zip", source="extension", file="lucee-extension.lex") {}
+        cfzip( action="zip", source="extension", file="lucee-extension.zip", overwrite="true" ) {}
+        cfzip( action="zip", source="extension", file="lucee-extension.lex", overwrite="true" ) {}
 
         print.line( "Generated lucee-extension.zip and lucee-extension.lex" );
     }
 
     function commitUpdates(){
-        command( '!git' )
-            .params( 'add lucee-extension.lex' )
-            .run();
-
-        command( '!git' )
-            .params( 'add lucee-extension.zip' )
-            .run();
+        var gitStatus = command( '!git' )
+            .params( 'status' )
+            .run( returnOutput=true );
         
-        command( '!git' )
-            .params( 'commit -m "Add new release .lex and .zip"' )
-            .run();
+        if ( gitStatus CONTAINS "lucee-extension" ) {
+            command( '!git' )
+                .params( 'add lucee-extension.*' )
+                .run();
+
+            command( '!git' )
+                .params( 'add lucee-extension.zip' )
+                .run();
+            
+            command( '!git' )
+                .params( 'commit -m "Add new release .lex and .zip"' )
+                .run();
+                print.greenLine( "New release with .lex and .zip" );
+        } else {
+            print.redLine( "Nothing new to release" );
+        }
     }
 }
