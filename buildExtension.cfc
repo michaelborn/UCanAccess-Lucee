@@ -23,10 +23,10 @@ component {
     // }
 
     function generateZips() {
-        cfzip( action="zip", source="extension", file="lucee-extension.zip", overwrite="true" ) {}
-        cfzip( action="zip", source="extension", file="lucee-extension.lex", overwrite="true" ) {}
+        cfzip( action="zip", source="extension", file="lucee-ucanaccess.zip", overwrite="true" ) {}
+        cfzip( action="zip", source="extension", file="lucee-ucanaccess.lex", overwrite="true" ) {}
 
-        print.line( "Generated lucee-extension.zip and lucee-extension.lex" );
+        print.line( "Generated lucee-ucanaccess.zip and lucee-ucanaccess.lex" );
     }
 
     function commitUpdates(){
@@ -34,13 +34,13 @@ component {
             .params( 'status' )
             .run( returnOutput=true );
         
-        if ( gitStatus CONTAINS "lucee-extension" ) {
+        if ( gitStatus CONTAINS "lucee-ucanaccess" ) {
             command( '!git' )
-                .params( 'add lucee-extension.*' )
+                .params( 'add lucee-ucanaccess.*' )
                 .run();
 
             command( '!git' )
-                .params( 'add lucee-extension.zip' )
+                .params( 'add lucee-ucanaccess.zip' )
                 .run();
             
             command( '!git' )

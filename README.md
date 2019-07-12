@@ -2,14 +2,28 @@
 
 Connect to MS Access databases easily with the [UCanAccess JDBC driver](http://ucanaccess.sourceforge.net/site.html) which supports MS Access files from 2000 through 2016.
 
+## Installation
+
+
+### via Forgebox Provider
+
+1. In your Lucee (Server) Administrator, go to the Extension > Providers page and add https://forgebox.io as a New Extension Provider if not already present
+2. Go to Extension > Applications and look for UCanAccess in the "Not installed" section
+3. Click the extension and install
+
+### Manual Installation
+
+1. Download the the lucee-ucanaccess.lex file
+2. In your Lucee Administrator, go to the Extension > Applications page
+3. Under "Upload new extension", select the lex file and click "Upload"
+
 ## Usage
 
-1. Add `https://forgebox.io` to your Lucee Extension Providers list.
-2. Install this extension.
-3. Configure your datasource
-   1. The classpath should be `net.ucanaccess.jdbc.UcanaccessDriver`
-   2. The connection string should start with `jdbc:ucanaccess:///`
-   3. The rest of the connection string should be your full MS Access file path: `C:\Users\me\my\AccessDatabase.accdb`
+The main "trick" to using the driver is configuring your datasource.
+
+1. The classpath should be `net.ucanaccess.jdbc.UcanaccessDriver`
+2. The connection string should start with `jdbc:ucanaccess:///`
+3. The rest of the connection string should be your full MS Access file path: `C:\Users\me\my\AccessDatabase.accdb`
 
 ```js
 msAccessDB = {
@@ -20,7 +34,7 @@ msAccessDB = {
 
 ## TODO
 
-* ❌ Get it actually working
+* ❌ Get it working
 * ❌ Test various datasource options - e.g. connectionLimit, username, password
 * ❌ More documentation?
 

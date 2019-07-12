@@ -22,7 +22,7 @@
             "URL":"http://www.apache.org/licenses/LICENSE-2.0.txt"
         }
     ],
-    "location":"https://bitbucket.org/michaelborn_me/ucanaccess/get/v0.6.0.zip",
+    "location":"https://bitbucket.org/michaelborn_me/ucanaccess/src/master/lucee-ucanaccess.zip",
     "private":false,
     "projectURL":"https://bitbucket.org/michaelborn_me/ucanaccess",
     "repository":{
@@ -30,7 +30,7 @@
         "URL":"https://bitbucket.org/michaelborn_me/ucanaccess"
     },
     "scripts":{
-        "postVersion":"package set location='https://bitbucket.org/michaelborn_me/ucanaccess/get/v`package version`.zip'",
+        "postVersion":"package set location='https://bitbucket.org/michaelborn_me/ucanaccess/src/v`package version`lucee-ucanaccess.zip'",
         "onRelease":"task run buildExtension && publish",
         "postPublish":"!git push --follow-tags"
     }
