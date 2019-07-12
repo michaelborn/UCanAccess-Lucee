@@ -31,8 +31,7 @@
     },
     "scripts":{
         "postVersion":"package set location='https://bitbucket.org/michaelborn_me/ucanaccess/get/v`package version`.zip'",
-        "preRelease":"repl input='cfzip(action=\"zip\",source=\"extension\",file=\"lucee-extension.zip\"){}' && repl input='cfzip(action=\"zip\",source=\"extension\",file=\"lucee-extension.lex\"){}' && git add lucee-extension.lex lucee-extension.zip && !git commit -m 'Add new release .lex and .zip'",
-        "onRelease":"publish",
+        "onRelease":"task run buildExtension && publish",
         "postPublish":"!git push --follow-tags"
     }
 }

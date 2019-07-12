@@ -4,7 +4,7 @@ Connect to MS Access databases easily with the [UCanAccess JDBC driver](http://u
 
 ## Usage
 
-1. Add Forgebox to your Lucee Extension Provider.
+1. Add `https://forgebox.io` to your Lucee Extension Providers list.
 2. Install this extension.
 3. Configure your datasource
    1. The classpath should be `net.ucanaccess.jdbc.UcanaccessDriver`
