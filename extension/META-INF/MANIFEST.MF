@@ -7,4 +7,4 @@ description: "JDBC Driver for the MS Access database."
 category: "Datasource"
 lucee-core-version: "5.0.0.019"
 start-bundles: false
-jdbc: "[{'label':'UCanAccess','id':'ucanaccess','connectionString':'jdbc:ucanaccess:///{file}','class':'net.ucanaccess.jdbc.UcanaccessDriver','bundleName':'net.ucanaccess.jdbc','bundleVersion':'0.0.1'}]"
+jdbc: "[{'label':'UCanAccess','id':'ucanaccess','connectionString':'jdbc:ucanaccess:///{file}','class':'net.ucanaccess.jdbc.UcanaccessDriver'}]"
