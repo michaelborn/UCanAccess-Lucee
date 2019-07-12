@@ -5,7 +5,7 @@
     "shortDescription":"JDBC driver for MS Access",
     "slug":"ucanaccess",
     "type":"lucee-extensions",
-    "version":"0.4.0",
+    "version":"0.5.0",
     "description":"Connect to MS Access database file via uCanAccess JDBC driver",
     "devDependencies":{},
     "documentation":"http://ucanaccess.sourceforge.net/site.html#examples",
@@ -22,7 +22,7 @@
             "URL":"http://www.apache.org/licenses/LICENSE-2.0.txt"
         }
     ],
-    "location":"https://bitbucket.org/michaelborn_me/ucanaccess/get/v0.4.0.zip",
+    "location":"https://bitbucket.org/michaelborn_me/ucanaccess/get/v0.5.0.zip",
     "private":false,
     "projectURL":"https://bitbucket.org/michaelborn_me/ucanaccess",
     "repository":{
