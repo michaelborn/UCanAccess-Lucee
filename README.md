@@ -1,9 +1,12 @@
 # UCanAccess
 
+
+
+[![cfmlbadges](https://cfmlbadges.monkehworks.com/images/badges/compatibility-lucee-5.svg)](https://cfmlbadges.monkehworks.com) [![cfmlbadges](https://cfmlbadges.monkehworks.com/images/badges/built-with-commandbox.svg)](https://cfmlbadges.monkehworks.com) [![cfmlbadges](https://cfmlbadges.monkehworks.com/images/badges/testing-whats-testing.svg)](https://cfmlbadges.monkehworks.com)
+
 Connect to MS Access databases easily with the [UCanAccess JDBC driver](http://ucanaccess.sourceforge.net/site.html) which supports MS Access files from 2000 through 2016.
 
 ## Installation
-
 
 ### via Forgebox Provider
 
@@ -36,7 +39,7 @@ msAccessDB = {
 
 * ❌ Get it working
 * ❌ Test various datasource options - e.g. connectionLimit, username, password
-* ❌ More documentation?
+* ❌ Document various [connection string options](http://ucanaccess.sourceforge.net/site.html#examples)
 
 ## The Good News
 
