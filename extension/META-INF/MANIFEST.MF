@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Built-Date: 2019-07-11 09:00:00
 version: "0.7.2"
-id: "com.michaelborn.ucanaccess"
+id: "007CA05C-E789-4769-A8B8C266E5675F7A"
 name: "UCanAccess"
 description: "JDBC Driver for the MS Access database."
 category: "Datasource"
